@@ -1,0 +1,14 @@
+format: jb-book
+root: intro
+
+options:
+  numbered: true
+
+chapters:
+  - file: notebooks/Intro
+  - file: notebooks/Class
+  - file: notebooks/Array
+  - file: notebooks/Recursion
+  - file: notebooks/LinkedList
+  - file: notebooks/Stack
+  - file: notebooks/Queue
