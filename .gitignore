@@ -1,0 +1,42 @@
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+ENV/
+*.egg-info/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook hidden outputs (if using extensions)
+*.nbconvert.ipynb
+
+# VSCode or IDE configs (optional)
+.vscode/
+.idea/
+
+# Data files (optional - depending on your project)
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.h5
+*.db
+*.sqlite
+
+# Model files (optional)
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.onnx
+_build/
