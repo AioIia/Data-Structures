@@ -39,3 +39,4 @@ Thumbs.db
 *.h5
 *.pt
 *.onnx
+_build/
