@@ -524,7 +524,7 @@ n!=
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time for iterative approach: 0.0 minutes
-Time for recursive approach: 0.001 minutes
+Time for recursive approach: 0.0 minutes
 </pre></div>
 </div>
 </div>
@@ -621,12 +621,13 @@ fib_recursive2: 55
 <section id="new-exercise">
 <h3><span class="section-number">4.2.5. </span>New Exercise<a class="headerlink" href="#new-exercise" title="Link to this heading">#</a></h3>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">max_consecutive_sum(L,</span> <span class="pre">k)</span></code> that takes a list <code class="docutils literal notranslate"><span class="pre">L</span></code> of integers and an integer <code class="docutils literal notranslate"><span class="pre">k</span></code>, and returns the maximum sum of any <code class="docutils literal notranslate"><span class="pre">k</span></code> consecutive elements in the list, with <code class="docutils literal notranslate"><span class="pre">len(L)</span></code> &gt;= <code class="docutils literal notranslate"><span class="pre">k</span></code> &gt;= 1.</p>
-<p>&gt;&gt;&gt; <code class="docutils literal notranslate"><span class="pre">max_consecutive_sum([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5],</span> <span class="pre">2)</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">9</span></code></p>
-<p>&gt;&gt;&gt; <code class="docutils literal notranslate"><span class="pre">max_consecutive_sum([5,</span> <span class="pre">-1,</span> <span class="pre">3,</span> <span class="pre">-2,</span> <span class="pre">4,</span> <span class="pre">1],</span> <span class="pre">3)</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">7</span></code></p>
-<p>&gt;&gt;&gt; <code class="docutils literal notranslate"><span class="pre">max_consecutive_sum([1,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">1],</span> <span class="pre">4)</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+<p>Example:</p>
+<p>&gt;&gt;&gt; <code class="docutils literal notranslate"><span class="pre">max_consecutive_sum([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5],</span> <span class="pre">2)</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">9</span></code><br />
+&gt;&gt;&gt; <code class="docutils literal notranslate"><span class="pre">max_consecutive_sum([5,</span> <span class="pre">-1,</span> <span class="pre">3,</span> <span class="pre">-2,</span> <span class="pre">4,</span> <span class="pre">1],</span> <span class="pre">3)</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">7</span></code><br />
+&gt;&gt;&gt; <code class="docutils literal notranslate"><span class="pre">max_consecutive_sum([1,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">1],</span> <span class="pre">4)</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">4</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">max_consecutive_sum</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
