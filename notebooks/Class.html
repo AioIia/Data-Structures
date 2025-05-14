@@ -662,7 +662,7 @@ This method should search for books by their title or author. It should return a
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">books</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">add_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">copies</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">copies</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;No description available&quot;</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">title</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">author</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                 <span class="n">book</span><span class="p">[</span><span class="s1">&#39;copies&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">copies</span>
@@ -670,7 +670,8 @@ This method should search for books by their title or author. It should return a
         <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
             <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
             <span class="s1">&#39;author&#39;</span><span class="p">:</span> <span class="n">author</span><span class="p">,</span>
-            <span class="s1">&#39;copies&#39;</span><span class="p">:</span> <span class="n">copies</span>
+            <span class="s1">&#39;copies&#39;</span><span class="p">:</span> <span class="n">copies</span><span class="p">,</span>
+            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">description</span>
         <span class="p">})</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">borrow_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
@@ -694,11 +695,13 @@ This method should search for books by their title or author. It should return a
 
 <span class="n">library</span> <span class="o">=</span> <span class="n">Library</span><span class="p">(</span><span class="s2">&quot;Bibliothèque des Pléiades&quot;</span><span class="p">)</span>
 
-<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Re:Zero&quot;</span><span class="p">,</span> <span class="s2">&quot;Tappei Nagatsuki&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Makeine: Too Many Losing Heroines!&quot;</span><span class="p">,</span> <span class="s2">&quot;Takibi Amamori&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Tomodachi Game&quot;</span><span class="p">,</span> <span class="s2">&quot;Mikoto Yamaguchi&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Summer Time Rendering&quot;</span><span class="p">,</span> <span class="s2">&quot;Yasuki Tanaka&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Go-Toubun no Hanayome&quot;</span><span class="p">,</span> <span class="s2">&quot;Negi Haruba&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Re:Zero&quot;</span><span class="p">,</span> <span class="s2">&quot;Tappei Nagatsuki&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Subaru is suddenly transported to a fantasy world where he discovers a terrifying power: every time he dies, he returns to a specific point in time.&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Makeine: Too Many Losing Heroines!&quot;</span><span class="p">,</span> <span class="s2">&quot;Takibi Amamori&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Kazuhiko finds himself caught in a bizarre romantic comedy where all the girls around him are doomed to be &#39;losing heroines&#39; in love.&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Tomodachi Game&quot;</span><span class="p">,</span> <span class="s2">&quot;Mikoto Yamaguchi&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Yuuichi and his friends are thrown into a mysterious game that tests the strength of their bonds through deception, betrayal, and money.&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Summer Time Rendering&quot;</span><span class="p">,</span> <span class="s2">&quot;Yasuki Tanaka&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Shinpei returns to his island hometown for a friend’s funeral, only to discover dark forces at play and a time loop that could change everything.&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Go-Toubun no Hanayome&quot;</span><span class="p">,</span> <span class="s2">&quot;Negi Haruba&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Fuutarou, a top student, becomes the private tutor of five wealthy quintuplets who all hate studying — and might just fall in love with him.&quot;</span><span class="p">)</span>
+
+
 
 <span class="nb">print</span><span class="p">(</span><span class="n">library</span><span class="o">.</span><span class="n">search_books</span><span class="p">(</span><span class="s2">&quot;Makeine&quot;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">library</span><span class="o">.</span><span class="n">search_books</span><span class="p">(</span><span class="s2">&quot;Re:Zero&quot;</span><span class="p">))</span>
@@ -712,8 +715,8 @@ This method should search for books by their title or author. It should return a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;title&#39;: &#39;Makeine: Too Many Losing Heroines!&#39;, &#39;author&#39;: &#39;Takibi Amamori&#39;, &#39;copies&#39;: 2}]
-[{&#39;title&#39;: &#39;Re:Zero&#39;, &#39;author&#39;: &#39;Tappei Nagatsuki&#39;, &#39;copies&#39;: 5}]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;title&#39;: &#39;Makeine: Too Many Losing Heroines!&#39;, &#39;author&#39;: &#39;Takibi Amamori&#39;, &#39;copies&#39;: 2, &#39;description&#39;: &quot;Kazuhiko finds himself caught in a bizarre romantic comedy where all the girls around him are doomed to be &#39;losing heroines&#39; in love.&quot;}]
+[{&#39;title&#39;: &#39;Re:Zero&#39;, &#39;author&#39;: &#39;Tappei Nagatsuki&#39;, &#39;copies&#39;: 5, &#39;description&#39;: &#39;Subaru is suddenly transported to a fantasy world where he discovers a terrifying power: every time he dies, he returns to a specific point in time.&#39;}]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
@@ -730,57 +733,137 @@ This method should search for books by their title or author. It should return a
 
 <span class="k">def</span><span class="w"> </span><span class="nf">visualize_books</span><span class="p">(</span><span class="n">library</span><span class="p">):</span>
     <span class="n">html</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    &lt;div style=&#39;font-family: &quot;Segoe UI&quot;, sans-serif; background-color: #f5f5f5; padding: 20px; border-radius: 8px; max-width: 1200px; margin: 0 auto;&#39;&gt;</span>
-<span class="s2">        &lt;h1 style=&#39;color:#1e3d59; text-align: center; margin-bottom: 25px;&#39;&gt;📚 </span><span class="si">{</span><span class="n">library</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&lt;/h1&gt;</span>
+<span class="s2">    &lt;div style=&#39;font-family: &quot;Roboto&quot;, sans-serif; background-color: #f5f5f5; padding: 20px; border-radius: 8px; max-width: 1200px; margin: 0 auto;&#39;&gt;</span>
+<span class="s2">        &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Roboto&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</span>
+<span class="s2">        </span>
+<span class="s2">        &lt;h1 style=&#39;font-family: &quot;Playfair Display&quot;, serif; color:#1e3d59; text-align: center; margin-bottom: 25px; font-size: 36px;&#39;&gt;📚 </span><span class="si">{</span><span class="n">library</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&lt;/h1&gt;</span>
+<span class="s2">        </span>
+<span class="s2">        &lt;style&gt;</span>
+<span class="s2">            .book-wrapper </span><span class="se">{{</span>
+<span class="s2">                display: inline-block;</span>
+<span class="s2">                margin: 15px;</span>
+<span class="s2">                vertical-align: top;</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">            </span>
+<span class="s2">            .book-card </span><span class="se">{{</span>
+<span class="s2">                position: relative;</span>
+<span class="s2">                height: 300px;</span>
+<span class="s2">                width: 300px;</span>
+<span class="s2">                transform-origin: center center;</span>
+<span class="s2">                transition: all 0.3s ease;</span>
+<span class="s2">                cursor: pointer;</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">            </span>
+<span class="s2">            .book-wrapper:hover .book-card </span><span class="se">{{</span>
+<span class="s2">                transform: translateY(-8px);</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">            </span>
+<span class="s2">            .book-inner </span><span class="se">{{</span>
+<span class="s2">                position: relative;</span>
+<span class="s2">                width: 100%;</span>
+<span class="s2">                height: 100%;</span>
+<span class="s2">                transition: transform 0.8s;</span>
+<span class="s2">                transform-style: preserve-3d;</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">            </span>
+<span class="s2">            .book-wrapper.flipped .book-inner </span><span class="se">{{</span>
+<span class="s2">                transform: rotateY(180deg);</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">            </span>
+<span class="s2">            .book-front, .book-back </span><span class="se">{{</span>
+<span class="s2">                position: absolute;</span>
+<span class="s2">                width: 100%;</span>
+<span class="s2">                height: 100%;</span>
+<span class="s2">                top: 0;</span>
+<span class="s2">                left: 0;</span>
+<span class="s2">                border-radius: 12px;</span>
+<span class="s2">                backface-visibility: hidden;</span>
+<span class="s2">                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);</span>
+<span class="s2">                font-family: &quot;Roboto&quot;, sans-serif;</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">            </span>
+<span class="s2">            .book-wrapper:hover .book-front,</span>
+<span class="s2">            .book-wrapper:hover .book-back </span><span class="se">{{</span>
+<span class="s2">                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">            </span>
+<span class="s2">            .book-back </span><span class="se">{{</span>
+<span class="s2">                transform: rotateY(180deg);</span>
+<span class="s2">                padding: 15px 20px;</span>
+<span class="s2">                overflow-y: auto;</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">            </span>
+<span class="s2">            .book-3d-container </span><span class="se">{{</span>
+<span class="s2">                perspective: 1000px;</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">        &lt;/style&gt;</span>
+<span class="s2">        &lt;script&gt;</span>
+<span class="s2">            function toggleFlip(id) </span><span class="se">{{</span>
+<span class="s2">                document.getElementById(id).classList.toggle(&#39;flipped&#39;);</span>
+<span class="s2">            </span><span class="se">}}</span>
+<span class="s2">        &lt;/script&gt;</span>
 <span class="s2">    &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">library</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
         <span class="n">html</span> <span class="o">+=</span> <span class="s2">&quot;&lt;p style=&#39;color: #e74c3c; font-weight: bold;&#39;&gt;No books available.&lt;/p&gt;&quot;</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">html</span> <span class="o">+=</span> <span class="s2">&quot;&lt;div style=&#39;display: flex; flex-wrap: wrap;&#39;&gt;&quot;</span>
+        <span class="n">html</span> <span class="o">+=</span> <span class="s2">&quot;&lt;div style=&#39;display: flex; flex-wrap: wrap; justify-content: center;&#39;&gt;&quot;</span>
 
-        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">library</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">book</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">library</span><span class="o">.</span><span class="n">books</span><span class="p">):</span>
+            <span class="n">book_id</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;book-</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="n">progress</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;copies&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
             <span class="n">is_available</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;copies&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
             <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#2ecc71&quot;</span> <span class="k">if</span> <span class="n">is_available</span> <span class="k">else</span> <span class="s2">&quot;#e74c3c&quot;</span>
             <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;Available&quot;</span> <span class="k">if</span> <span class="n">is_available</span> <span class="k">else</span> <span class="s2">&quot;Unavailable&quot;</span>
-            <span class="n">bg_card</span> <span class="o">=</span> <span class="s2">&quot;#f7f7f7&quot;</span> <span class="k">if</span> <span class="n">is_available</span> <span class="k">else</span> <span class="s2">&quot;#fceeee&quot;</span>
+            <span class="n">bg_card</span> <span class="o">=</span> <span class="s2">&quot;#fdfdfd&quot;</span> <span class="k">if</span> <span class="n">is_available</span> <span class="k">else</span> <span class="s2">&quot;#fceeee&quot;</span>
 
             <span class="n">html</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">            &lt;div style=&quot;</span>
-<span class="s2">                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),</span>
-<span class="s2">                url(&#39;../_static/images/</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">.jpg&#39;) no-repeat center center;</span>
-<span class="s2">                background-size: cover;</span>
-<span class="s2">                border-left: 6px solid </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">;</span>
-<span class="s2">                border-radius: 12px;</span>
-<span class="s2">                margin: 10px;</span>
-<span class="s2">                padding: 15px 20px;</span>
-<span class="s2">                width: 300px;</span>
-<span class="s2">                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);</span>
-<span class="s2">                transition: transform 0.3s, box-shadow 0.3s;</span>
-<span class="s2">                cursor: pointer;</span>
-<span class="s2">                &quot;</span>
-<span class="s2">                onmouseover=&quot;this.style.transform=&#39;translateY(-8px)&#39;; this.style.boxShadow=&#39;0 12px 20px rgba(0, 0, 0, 0.15)&#39;;&quot;</span>
-<span class="s2">                onmouseout=&quot;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 4px 8px rgba(0, 0, 0, 0.05)&#39;;&quot;</span>
-<span class="s2">                &gt;</span>
+<span class="s2">            &lt;div id=&quot;</span><span class="si">{</span><span class="n">book_id</span><span class="si">}</span><span class="s2">&quot; class=&quot;book-wrapper&quot; onclick=&quot;toggleFlip(&#39;</span><span class="si">{</span><span class="n">book_id</span><span class="si">}</span><span class="s2">&#39;)&quot;&gt;</span>
+<span class="s2">                &lt;div class=&quot;book-3d-container&quot;&gt;</span>
+<span class="s2">                    &lt;div class=&quot;book-card&quot;&gt;</span>
+<span class="s2">                        &lt;div class=&quot;book-inner&quot;&gt;</span>
+<span class="s2">                            &lt;div class=&quot;book-front&quot; style=&quot;</span>
+<span class="s2">                                background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),</span>
+<span class="s2">                                url(&#39;../_static/images/</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">.jpg&#39;) no-repeat center center;</span>
+<span class="s2">                                background-size: cover;</span>
+<span class="s2">                                border-left: 6px solid </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">;</span>
+<span class="s2">                                padding: 15px 20px;</span>
+<span class="s2">                                &quot;&gt;</span>
 
-<span class="s2">                &lt;h3 style=&quot;margin-top: 0; color: #2c3e50;&quot;&gt;</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/h3&gt;</span>
-<span class="s2">                &lt;p style=&quot;margin: 4px 0; color : #585858;&quot;&gt;&lt;strong&gt;Author:&lt;/strong&gt; </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/p&gt;</span>
-<span class="s2">                &lt;p style=&quot;margin: 4px 0; color : #585858;&quot;&gt;</span>
-<span class="s2">                    &lt;strong&gt;Status:&lt;/strong&gt; &lt;span style=&quot;color: </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">; font-weight: bold;&quot;&gt;</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&lt;/span&gt;</span>
-<span class="s2">                &lt;/p&gt;</span>
-<span class="s2">                &lt;div style=&quot;background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;&quot;&gt;</span>
-<span class="s2">                    &lt;div style=&quot;</span>
-<span class="s2">                        background-color: </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">;</span>
-<span class="s2">                        height: 100%;</span>
-<span class="s2">                        border-radius: 5px;</span>
-<span class="s2">                        width: </span><span class="si">{</span><span class="n">progress</span><span class="si">}</span><span class="s2">%;</span>
-<span class="s2">                        transition: width 0.3s;</span>
-<span class="s2">                    &quot;&gt;&lt;/div&gt;</span>
+<span class="s2">                                &lt;h3 style=&quot;margin-top: 0; font-family: &#39;Playfair Display&#39;, serif; font-size: 20px; color: #2c3e50;&quot;&gt;</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/h3&gt;</span>
+<span class="s2">                                &lt;p style=&quot;margin: 4px 0; color : #585858;&quot;&gt;&lt;strong&gt;Author:&lt;/strong&gt; </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/p&gt;</span>
+<span class="s2">                                &lt;p style=&quot;margin: 4px 0; color : #585858;&quot;&gt;</span>
+<span class="s2">                                    &lt;strong&gt;Status:&lt;/strong&gt; &lt;span style=&quot;color: </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">; font-weight: bold;&quot;&gt;</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&lt;/span&gt;</span>
+<span class="s2">                                &lt;/p&gt;</span>
+<span class="s2">                                &lt;div style=&quot;background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;&quot;&gt;</span>
+<span class="s2">                                    &lt;div style=&quot;</span>
+<span class="s2">                                        background-color: </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">;</span>
+<span class="s2">                                        height: 100%;</span>
+<span class="s2">                                        border-radius: 5px;</span>
+<span class="s2">                                        width: </span><span class="si">{</span><span class="n">progress</span><span class="si">}</span><span class="s2">%;</span>
+<span class="s2">                                        transition: width 0.3s;</span>
+<span class="s2">                                    &quot;&gt;&lt;/div&gt;</span>
+<span class="s2">                                &lt;/div&gt;</span>
+<span class="s2">                                &lt;p style=&quot;text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;&quot;&gt;</span>
+<span class="s2">                                    &lt;strong&gt;</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;copies&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> copy/copies&lt;/strong&gt;</span>
+<span class="s2">                                &lt;/p&gt;</span>
+<span class="s2">                            &lt;/div&gt;</span>
+<span class="s2">                            &lt;div class=&quot;book-back&quot; style=&quot;</span>
+<span class="s2">                                background-color: </span><span class="si">{</span><span class="n">bg_card</span><span class="si">}</span><span class="s2">;</span>
+<span class="s2">                                border-left: 6px solid </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">;</span>
+<span class="s2">                                &quot;&gt;</span>
+<span class="s2">                                &lt;h3 style=&quot;margin-top: 0; font-family: &#39;Playfair Display&#39;, serif; color: #2c3e50;&quot;&gt;</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/h3&gt;</span>
+<span class="s2">                                &lt;p style=&quot;color: #444;&quot;&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="s2">                                &lt;p style=&quot;color: #555; font-size: 0.95em; line-height: 1.4em;&quot;&gt;</span>
+<span class="s2">                                    </span><span class="si">{</span><span class="n">book</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;No description available for this book.&#39;</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">                                &lt;/p&gt;</span>
+<span class="s2">                                &lt;p style=&quot;color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: &#39;Roboto&#39;, sans-serif; font-size: 13px;&quot;&gt;</span>
+<span class="s2">                                    ~ </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">                                &lt;/p&gt;</span>
+<span class="s2">                            &lt;/div&gt;</span>
+<span class="s2">                        &lt;/div&gt;</span>
+<span class="s2">                    &lt;/div&gt;</span>
 <span class="s2">                &lt;/div&gt;</span>
-<span class="s2">                &lt;p style=&quot;text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;&quot;&gt;</span>
-<span class="s2">                    &lt;strong&gt;</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;copies&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> copy/copies&lt;/strong&gt;</span>
-<span class="s2">                &lt;/p&gt;</span>
 <span class="s2">            &lt;/div&gt;</span>
 <span class="s2">            &quot;&quot;&quot;</span>
         <span class="n">html</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/div&gt;&quot;</span>
@@ -789,193 +872,321 @@ This method should search for books by their title or author. It should return a
     <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html</span><span class="p">))</span>
 
 
+
 <span class="n">visualize_books</span><span class="p">(</span><span class="n">library</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-    <div style='font-family: "Segoe UI", sans-serif; background-color: #f5f5f5; padding: 20px; border-radius: 8px; max-width: 1200px; margin: 0 auto;'>
-        <h1 style='color:#1e3d59; text-align: center; margin-bottom: 25px;'>📚 Bibliothèque des Pléiades</h1>
-    <div style='display: flex; flex-wrap: wrap;'>
-            <div style="
-                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-                url('../_static/images/ReZero.jpg') no-repeat center center;
-                background-size: cover;
-                border-left: 6px solid #2ecc71;
-                border-radius: 12px;
-                margin: 10px;
-                padding: 15px 20px;
-                width: 300px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s, box-shadow 0.3s;
-                cursor: pointer;
-                "
-                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
-                >
+    <div style='font-family: "Roboto", sans-serif; background-color: #f5f5f5; padding: 20px; border-radius: 8px; max-width: 1200px; margin: 0 auto;'>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
 
-                <h3 style="margin-top: 0; color: #2c3e50;">Re:Zero</h3>
-                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Tappei Nagatsuki</p>
-                <p style="margin: 4px 0; color : #585858;">
-                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
-                </p>
-                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
-                    <div style="
-                        background-color: #2ecc71;
-                        height: 100%;
-                        border-radius: 5px;
-                        width: 40.0%;
-                        transition: width 0.3s;
-                    "></div>
+        <h1 style='font-family: "Playfair Display", serif; color:#1e3d59; text-align: center; margin-bottom: 25px; font-size: 36px;'>📚 Bibliothèque des Pléiades</h1>
+
+        <style>
+            .book-wrapper {
+                display: inline-block;
+                margin: 15px;
+                vertical-align: top;
+            }
+
+            .book-card {
+                position: relative;
+                height: 300px;
+                width: 300px;
+                transform-origin: center center;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .book-wrapper:hover .book-card {
+                transform: translateY(-8px);
+            }
+
+            .book-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+
+            .book-wrapper.flipped .book-inner {
+                transform: rotateY(180deg);
+            }
+
+            .book-front, .book-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 12px;
+                backface-visibility: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                font-family: "Roboto", sans-serif;
+            }
+
+            .book-wrapper:hover .book-front,
+            .book-wrapper:hover .book-back {
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .book-back {
+                transform: rotateY(180deg);
+                padding: 15px 20px;
+                overflow-y: auto;
+            }
+
+            .book-3d-container {
+                perspective: 1000px;
+            }
+        </style>
+        <script>
+            function toggleFlip(id) {
+                document.getElementById(id).classList.toggle('flipped');
+            }
+        </script>
+    <div style='display: flex; flex-wrap: wrap; justify-content: center;'>
+            <div id="book-0" class="book-wrapper" onclick="toggleFlip('book-0')">
+                <div class="book-3d-container">
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="
+                                background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                                url('../_static/images/ReZero.jpg') no-repeat center center;
+                                background-size: cover;
+                                border-left: 6px solid #2ecc71;
+                                padding: 15px 20px;
+                                ">
+
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50;">Re:Zero</h3>
+                                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Tappei Nagatsuki</p>
+                                <p style="margin: 4px 0; color : #585858;">
+                                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
+                                </p>
+                                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
+                                    <div style="
+                                        background-color: #2ecc71;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                        width: 40.0%;
+                                        transition: width 0.3s;
+                                    "></div>
+                                </div>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
+                                    <strong>4 copy/copies</strong>
+                                </p>
+                            </div>
+                            <div class="book-back" style="
+                                background-color: #fdfdfd;
+                                border-left: 6px solid #2ecc71;
+                                ">
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; color: #2c3e50;">Re:Zero</h3>
+                                <p style="color: #444;"><strong>Description:</strong></p>
+                                <p style="color: #555; font-size: 0.95em; line-height: 1.4em;">
+                                    Subaru is suddenly transported to a fantasy world where he discovers a terrifying power: every time he dies, he returns to a specific point in time.
+                                </p>
+                                <p style="color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: 'Roboto', sans-serif; font-size: 13px;">
+                                    ~ Tappei Nagatsuki
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
-                    <strong>4 copy/copies</strong>
-                </p>
             </div>
             
-            <div style="
-                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-                url('../_static/images/Makeine Too Many Losing Heroines!.jpg') no-repeat center center;
-                background-size: cover;
-                border-left: 6px solid #e74c3c;
-                border-radius: 12px;
-                margin: 10px;
-                padding: 15px 20px;
-                width: 300px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s, box-shadow 0.3s;
-                cursor: pointer;
-                "
-                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
-                >
+            <div id="book-1" class="book-wrapper" onclick="toggleFlip('book-1')">
+                <div class="book-3d-container">
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="
+                                background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                                url('../_static/images/Makeine Too Many Losing Heroines!.jpg') no-repeat center center;
+                                background-size: cover;
+                                border-left: 6px solid #e74c3c;
+                                padding: 15px 20px;
+                                ">
 
-                <h3 style="margin-top: 0; color: #2c3e50;">Makeine: Too Many Losing Heroines!</h3>
-                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Takibi Amamori</p>
-                <p style="margin: 4px 0; color : #585858;">
-                    <strong>Status:</strong> <span style="color: #e74c3c; font-weight: bold;">Unavailable</span>
-                </p>
-                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
-                    <div style="
-                        background-color: #e74c3c;
-                        height: 100%;
-                        border-radius: 5px;
-                        width: 0.0%;
-                        transition: width 0.3s;
-                    "></div>
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50;">Makeine: Too Many Losing Heroines!</h3>
+                                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Takibi Amamori</p>
+                                <p style="margin: 4px 0; color : #585858;">
+                                    <strong>Status:</strong> <span style="color: #e74c3c; font-weight: bold;">Unavailable</span>
+                                </p>
+                                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
+                                    <div style="
+                                        background-color: #e74c3c;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                        width: 0.0%;
+                                        transition: width 0.3s;
+                                    "></div>
+                                </div>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
+                                    <strong>0 copy/copies</strong>
+                                </p>
+                            </div>
+                            <div class="book-back" style="
+                                background-color: #fceeee;
+                                border-left: 6px solid #e74c3c;
+                                ">
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; color: #2c3e50;">Makeine: Too Many Losing Heroines!</h3>
+                                <p style="color: #444;"><strong>Description:</strong></p>
+                                <p style="color: #555; font-size: 0.95em; line-height: 1.4em;">
+                                    Kazuhiko finds himself caught in a bizarre romantic comedy where all the girls around him are doomed to be 'losing heroines' in love.
+                                </p>
+                                <p style="color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: 'Roboto', sans-serif; font-size: 13px;">
+                                    ~ Takibi Amamori
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
-                    <strong>0 copy/copies</strong>
-                </p>
             </div>
             
-            <div style="
-                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-                url('../_static/images/Tomodachi Game.jpg') no-repeat center center;
-                background-size: cover;
-                border-left: 6px solid #2ecc71;
-                border-radius: 12px;
-                margin: 10px;
-                padding: 15px 20px;
-                width: 300px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s, box-shadow 0.3s;
-                cursor: pointer;
-                "
-                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
-                >
+            <div id="book-2" class="book-wrapper" onclick="toggleFlip('book-2')">
+                <div class="book-3d-container">
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="
+                                background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                                url('../_static/images/Tomodachi Game.jpg') no-repeat center center;
+                                background-size: cover;
+                                border-left: 6px solid #2ecc71;
+                                padding: 15px 20px;
+                                ">
 
-                <h3 style="margin-top: 0; color: #2c3e50;">Tomodachi Game</h3>
-                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Mikoto Yamaguchi</p>
-                <p style="margin: 4px 0; color : #585858;">
-                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
-                </p>
-                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
-                    <div style="
-                        background-color: #2ecc71;
-                        height: 100%;
-                        border-radius: 5px;
-                        width: 20.0%;
-                        transition: width 0.3s;
-                    "></div>
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50;">Tomodachi Game</h3>
+                                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Mikoto Yamaguchi</p>
+                                <p style="margin: 4px 0; color : #585858;">
+                                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
+                                </p>
+                                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
+                                    <div style="
+                                        background-color: #2ecc71;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                        width: 20.0%;
+                                        transition: width 0.3s;
+                                    "></div>
+                                </div>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
+                                    <strong>2 copy/copies</strong>
+                                </p>
+                            </div>
+                            <div class="book-back" style="
+                                background-color: #fdfdfd;
+                                border-left: 6px solid #2ecc71;
+                                ">
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; color: #2c3e50;">Tomodachi Game</h3>
+                                <p style="color: #444;"><strong>Description:</strong></p>
+                                <p style="color: #555; font-size: 0.95em; line-height: 1.4em;">
+                                    Yuuichi and his friends are thrown into a mysterious game that tests the strength of their bonds through deception, betrayal, and money.
+                                </p>
+                                <p style="color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: 'Roboto', sans-serif; font-size: 13px;">
+                                    ~ Mikoto Yamaguchi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
-                    <strong>2 copy/copies</strong>
-                </p>
             </div>
             
-            <div style="
-                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-                url('../_static/images/Summer Time Rendering.jpg') no-repeat center center;
-                background-size: cover;
-                border-left: 6px solid #2ecc71;
-                border-radius: 12px;
-                margin: 10px;
-                padding: 15px 20px;
-                width: 300px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s, box-shadow 0.3s;
-                cursor: pointer;
-                "
-                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
-                >
+            <div id="book-3" class="book-wrapper" onclick="toggleFlip('book-3')">
+                <div class="book-3d-container">
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="
+                                background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                                url('../_static/images/Summer Time Rendering.jpg') no-repeat center center;
+                                background-size: cover;
+                                border-left: 6px solid #2ecc71;
+                                padding: 15px 20px;
+                                ">
 
-                <h3 style="margin-top: 0; color: #2c3e50;">Summer Time Rendering</h3>
-                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Yasuki Tanaka</p>
-                <p style="margin: 4px 0; color : #585858;">
-                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
-                </p>
-                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
-                    <div style="
-                        background-color: #2ecc71;
-                        height: 100%;
-                        border-radius: 5px;
-                        width: 30.0%;
-                        transition: width 0.3s;
-                    "></div>
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50;">Summer Time Rendering</h3>
+                                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Yasuki Tanaka</p>
+                                <p style="margin: 4px 0; color : #585858;">
+                                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
+                                </p>
+                                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
+                                    <div style="
+                                        background-color: #2ecc71;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                        width: 30.0%;
+                                        transition: width 0.3s;
+                                    "></div>
+                                </div>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
+                                    <strong>3 copy/copies</strong>
+                                </p>
+                            </div>
+                            <div class="book-back" style="
+                                background-color: #fdfdfd;
+                                border-left: 6px solid #2ecc71;
+                                ">
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; color: #2c3e50;">Summer Time Rendering</h3>
+                                <p style="color: #444;"><strong>Description:</strong></p>
+                                <p style="color: #555; font-size: 0.95em; line-height: 1.4em;">
+                                    Shinpei returns to his island hometown for a friend’s funeral, only to discover dark forces at play and a time loop that could change everything.
+                                </p>
+                                <p style="color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: 'Roboto', sans-serif; font-size: 13px;">
+                                    ~ Yasuki Tanaka
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
-                    <strong>3 copy/copies</strong>
-                </p>
             </div>
             
-            <div style="
-                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-                url('../_static/images/Go-Toubun no Hanayome.jpg') no-repeat center center;
-                background-size: cover;
-                border-left: 6px solid #2ecc71;
-                border-radius: 12px;
-                margin: 10px;
-                padding: 15px 20px;
-                width: 300px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s, box-shadow 0.3s;
-                cursor: pointer;
-                "
-                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
-                >
+            <div id="book-4" class="book-wrapper" onclick="toggleFlip('book-4')">
+                <div class="book-3d-container">
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="
+                                background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                                url('../_static/images/Go-Toubun no Hanayome.jpg') no-repeat center center;
+                                background-size: cover;
+                                border-left: 6px solid #2ecc71;
+                                padding: 15px 20px;
+                                ">
 
-                <h3 style="margin-top: 0; color: #2c3e50;">Go-Toubun no Hanayome</h3>
-                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Negi Haruba</p>
-                <p style="margin: 4px 0; color : #585858;">
-                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
-                </p>
-                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
-                    <div style="
-                        background-color: #2ecc71;
-                        height: 100%;
-                        border-radius: 5px;
-                        width: 60.0%;
-                        transition: width 0.3s;
-                    "></div>
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50;">Go-Toubun no Hanayome</h3>
+                                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Negi Haruba</p>
+                                <p style="margin: 4px 0; color : #585858;">
+                                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
+                                </p>
+                                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
+                                    <div style="
+                                        background-color: #2ecc71;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                        width: 60.0%;
+                                        transition: width 0.3s;
+                                    "></div>
+                                </div>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
+                                    <strong>6 copy/copies</strong>
+                                </p>
+                            </div>
+                            <div class="book-back" style="
+                                background-color: #fdfdfd;
+                                border-left: 6px solid #2ecc71;
+                                ">
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; color: #2c3e50;">Go-Toubun no Hanayome</h3>
+                                <p style="color: #444;"><strong>Description:</strong></p>
+                                <p style="color: #555; font-size: 0.95em; line-height: 1.4em;">
+                                    Fuutarou, a top student, becomes the private tutor of five wealthy quintuplets who all hate studying — and might just fall in love with him.
+                                </p>
+                                <p style="color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: 'Roboto', sans-serif; font-size: 13px;">
+                                    ~ Negi Haruba
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
-                    <strong>6 copy/copies</strong>
-                </p>
             </div>
             </div></div></div></div>
 </div>
