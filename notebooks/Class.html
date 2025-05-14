@@ -748,7 +748,9 @@ This method should search for books by their title or author. It should return a
 
             <span class="n">html</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">            &lt;div style=&quot;</span>
-<span class="s2">                background-color: </span><span class="si">{</span><span class="n">bg_card</span><span class="si">}</span><span class="s2">;</span>
+<span class="s2">                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),</span>
+<span class="s2">                url(&#39;../assets/images/</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.jpg&#39;) no-repeat center center;</span>
+<span class="s2">                background-size: cover;</span>
 <span class="s2">                border-left: 6px solid </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">;</span>
 <span class="s2">                border-radius: 12px;</span>
 <span class="s2">                margin: 10px;</span>
@@ -756,7 +758,8 @@ This method should search for books by their title or author. It should return a
 <span class="s2">                width: 300px;</span>
 <span class="s2">                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);</span>
 <span class="s2">                transition: transform 0.2s;</span>
-<span class="s2">            &quot;&gt;</span>
+<span class="s2">                &quot;&gt;</span>
+
 <span class="s2">                &lt;h3 style=&quot;margin-top: 0; color: #2c3e50;&quot;&gt;</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/h3&gt;</span>
 <span class="s2">                &lt;p style=&quot;margin: 4px 0; color : #585858;&quot;&gt;&lt;strong&gt;Author:&lt;/strong&gt; </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/p&gt;</span>
 <span class="s2">                &lt;p style=&quot;margin: 4px 0; color : #585858;&quot;&gt;</span>
@@ -792,7 +795,9 @@ This method should search for books by their title or author. It should return a
         <h1 style='color:#1e3d59;'>📚 Bibliothèque des Pléiades</h1>
     <div style='display: flex; flex-wrap: wrap;'>
             <div style="
-                background-color: #f7f7f7;
+                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                url('../assets/images/ReZero.jpg') no-repeat center center;
+                background-size: cover;
                 border-left: 6px solid #2ecc71;
                 border-radius: 12px;
                 margin: 10px;
@@ -800,7 +805,8 @@ This method should search for books by their title or author. It should return a
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
                 transition: transform 0.2s;
-            ">
+                ">
+
                 <h3 style="margin-top: 0; color: #2c3e50;">Re:Zero</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Tappei Nagatsuki</p>
                 <p style="margin: 4px 0; color : #585858;">
@@ -821,7 +827,9 @@ This method should search for books by their title or author. It should return a
             </div>
             
             <div style="
-                background-color: #fceeee;
+                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                url('../assets/images/Makeine Too Many Losing Heroines!.jpg') no-repeat center center;
+                background-size: cover;
                 border-left: 6px solid #e74c3c;
                 border-radius: 12px;
                 margin: 10px;
@@ -829,7 +837,8 @@ This method should search for books by their title or author. It should return a
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
                 transition: transform 0.2s;
-            ">
+                ">
+
                 <h3 style="margin-top: 0; color: #2c3e50;">Makeine: Too Many Losing Heroines!</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Takibi Amamori</p>
                 <p style="margin: 4px 0; color : #585858;">
@@ -850,7 +859,9 @@ This method should search for books by their title or author. It should return a
             </div>
             
             <div style="
-                background-color: #f7f7f7;
+                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                url('../assets/images/Tomodachi Game.jpg') no-repeat center center;
+                background-size: cover;
                 border-left: 6px solid #2ecc71;
                 border-radius: 12px;
                 margin: 10px;
@@ -858,7 +869,8 @@ This method should search for books by their title or author. It should return a
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
                 transition: transform 0.2s;
-            ">
+                ">
+
                 <h3 style="margin-top: 0; color: #2c3e50;">Tomodachi Game</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Mikoto Yamaguchi</p>
                 <p style="margin: 4px 0; color : #585858;">
@@ -879,7 +891,9 @@ This method should search for books by their title or author. It should return a
             </div>
             
             <div style="
-                background-color: #f7f7f7;
+                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                url('../assets/images/Summer Time Rendering.jpg') no-repeat center center;
+                background-size: cover;
                 border-left: 6px solid #2ecc71;
                 border-radius: 12px;
                 margin: 10px;
@@ -887,7 +901,8 @@ This method should search for books by their title or author. It should return a
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
                 transition: transform 0.2s;
-            ">
+                ">
+
                 <h3 style="margin-top: 0; color: #2c3e50;">Summer Time Rendering</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Yasuki Tanaka</p>
                 <p style="margin: 4px 0; color : #585858;">
@@ -908,7 +923,9 @@ This method should search for books by their title or author. It should return a
             </div>
             
             <div style="
-                background-color: #f7f7f7;
+                background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                url('../assets/images/Go-Toubun no Hanayome.jpg') no-repeat center center;
+                background-size: cover;
                 border-left: 6px solid #2ecc71;
                 border-radius: 12px;
                 margin: 10px;
@@ -916,7 +933,8 @@ This method should search for books by their title or author. It should return a
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
                 transition: transform 0.2s;
-            ">
+                ">
+
                 <h3 style="margin-top: 0; color: #2c3e50;">Go-Toubun no Hanayome</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Negi Haruba</p>
                 <p style="margin: 4px 0; color : #585858;">
