@@ -730,8 +730,8 @@ This method should search for books by their title or author. It should return a
 
 <span class="k">def</span><span class="w"> </span><span class="nf">visualize_books</span><span class="p">(</span><span class="n">library</span><span class="p">):</span>
     <span class="n">html</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    &lt;div style=&#39;font-family: &quot;Segoe UI&quot;, sans-serif; background-color: #ffffff; padding: 20px; border-radius: 8px;&#39;&gt;</span>
-<span class="s2">        &lt;h1 style=&#39;color:#1e3d59;&#39;&gt;📚 </span><span class="si">{</span><span class="n">library</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&lt;/h1&gt;</span>
+<span class="s2">    &lt;div style=&#39;font-family: &quot;Segoe UI&quot;, sans-serif; background-color: #f5f5f5; padding: 20px; border-radius: 8px; max-width: 1200px; margin: 0 auto;&#39;&gt;</span>
+<span class="s2">        &lt;h1 style=&#39;color:#1e3d59; text-align: center; margin-bottom: 25px;&#39;&gt;📚 </span><span class="si">{</span><span class="n">library</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&lt;/h1&gt;</span>
 <span class="s2">    &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">library</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
@@ -757,8 +757,12 @@ This method should search for books by their title or author. It should return a
 <span class="s2">                padding: 15px 20px;</span>
 <span class="s2">                width: 300px;</span>
 <span class="s2">                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);</span>
-<span class="s2">                transition: transform 0.2s;</span>
-<span class="s2">                &quot;&gt;</span>
+<span class="s2">                transition: transform 0.3s, box-shadow 0.3s;</span>
+<span class="s2">                cursor: pointer;</span>
+<span class="s2">                &quot;</span>
+<span class="s2">                onmouseover=&quot;this.style.transform=&#39;translateY(-8px)&#39;; this.style.boxShadow=&#39;0 12px 20px rgba(0, 0, 0, 0.15)&#39;;&quot;</span>
+<span class="s2">                onmouseout=&quot;this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 4px 8px rgba(0, 0, 0, 0.05)&#39;;&quot;</span>
+<span class="s2">                &gt;</span>
 
 <span class="s2">                &lt;h3 style=&quot;margin-top: 0; color: #2c3e50;&quot;&gt;</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/h3&gt;</span>
 <span class="s2">                &lt;p style=&quot;margin: 4px 0; color : #585858;&quot;&gt;&lt;strong&gt;Author:&lt;/strong&gt; </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/p&gt;</span>
@@ -791,8 +795,8 @@ This method should search for books by their title or author. It should return a
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-    <div style='font-family: "Segoe UI", sans-serif; background-color: #ffffff; padding: 20px; border-radius: 8px;'>
-        <h1 style='color:#1e3d59;'>📚 Bibliothèque des Pléiades</h1>
+    <div style='font-family: "Segoe UI", sans-serif; background-color: #f5f5f5; padding: 20px; border-radius: 8px; max-width: 1200px; margin: 0 auto;'>
+        <h1 style='color:#1e3d59; text-align: center; margin-bottom: 25px;'>📚 Bibliothèque des Pléiades</h1>
     <div style='display: flex; flex-wrap: wrap;'>
             <div style="
                 background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
@@ -804,8 +808,12 @@ This method should search for books by their title or author. It should return a
                 padding: 15px 20px;
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.2s;
-                ">
+                transition: transform 0.3s, box-shadow 0.3s;
+                cursor: pointer;
+                "
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
+                >
 
                 <h3 style="margin-top: 0; color: #2c3e50;">Re:Zero</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Tappei Nagatsuki</p>
@@ -836,8 +844,12 @@ This method should search for books by their title or author. It should return a
                 padding: 15px 20px;
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.2s;
-                ">
+                transition: transform 0.3s, box-shadow 0.3s;
+                cursor: pointer;
+                "
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
+                >
 
                 <h3 style="margin-top: 0; color: #2c3e50;">Makeine: Too Many Losing Heroines!</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Takibi Amamori</p>
@@ -868,8 +880,12 @@ This method should search for books by their title or author. It should return a
                 padding: 15px 20px;
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.2s;
-                ">
+                transition: transform 0.3s, box-shadow 0.3s;
+                cursor: pointer;
+                "
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
+                >
 
                 <h3 style="margin-top: 0; color: #2c3e50;">Tomodachi Game</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Mikoto Yamaguchi</p>
@@ -900,8 +916,12 @@ This method should search for books by their title or author. It should return a
                 padding: 15px 20px;
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.2s;
-                ">
+                transition: transform 0.3s, box-shadow 0.3s;
+                cursor: pointer;
+                "
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
+                >
 
                 <h3 style="margin-top: 0; color: #2c3e50;">Summer Time Rendering</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Yasuki Tanaka</p>
@@ -932,8 +952,12 @@ This method should search for books by their title or author. It should return a
                 padding: 15px 20px;
                 width: 300px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                transition: transform 0.2s;
-                ">
+                transition: transform 0.3s, box-shadow 0.3s;
+                cursor: pointer;
+                "
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 20px rgba(0, 0, 0, 0.15)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.05)';"
+                >
 
                 <h3 style="margin-top: 0; color: #2c3e50;">Go-Toubun no Hanayome</h3>
                 <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Negi Haruba</p>
