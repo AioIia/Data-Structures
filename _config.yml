@@ -31,3 +31,10 @@ html:
   use_issues_button: true
   use_repository_button: true
   static_path: ['_static']
+
+sphinx:
+  extra_extensions:
+    - sphinxcontrib.mermaid
+  config:
+    myst_enable_extensions:
+      - colon_fence
