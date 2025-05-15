@@ -57,8 +57,6 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Recursion';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -419,7 +417,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="recursion">
+  <section id="recursion">
 <h1><span class="section-number">4. </span>Recursion<a class="headerlink" href="#recursion" title="Link to this heading">#</a></h1>
 <section id="set-up">
 <h2><span class="section-number">4.1. </span>Set Up<a class="headerlink" href="#set-up" title="Link to this heading">#</a></h2>
@@ -439,7 +437,7 @@ document.write(`
 <h2><span class="section-number">4.2. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
 <section id="example-1-fibonacci">
 <h3><span class="section-number">4.2.1. </span>Example 1: Fibonacci<a class="headerlink" href="#example-1-fibonacci" title="Link to this heading">#</a></h3>
-<p>In the lecture, we showed the time complexity of the below algorithm for Fibonacci series is <span class="math notranslate nohighlight">\(O(2^n)\)</span>. In similar way, find Big Omega <span class="math notranslate nohighlight">\(\Omega(\cdot)\)</span> of this algorithm.</p>
+<p>In the lecture, we showed the time complexity of the below algorithm for Fibonacci series is $O(2^n)$. In similar way, find Big Omega $\Omega(\cdot)$ of this algorithm.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recursion</span>
@@ -467,16 +465,15 @@ document.write(`
 </ul>
 </li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>$$
 \begin{align*}
 n!=
 \begin{cases}
-  1 &amp; \text{if $n &lt; 1$}\\
-  n*(n-1)! &amp; \text{if $n \ge 1$}
-\end{cases}    
+1 &amp; \text{if $n &lt; 1$}\
+n*(n-1)! &amp; \text{if $n \ge 1$}
+\end{cases}<br />
 \end{align*}
-\end{split}\]</div>
+$$</p>
 <ul class="simple">
 <li><p>Time complexity analysis</p>
 <ul>
@@ -584,7 +581,7 @@ Time for recursive approach: 0.0 minutes
 </section>
 <section id="example-4-fibonacci-o-n">
 <h3><span class="section-number">4.2.4. </span>Example 4: Fibonacci O(n)<a class="headerlink" href="#example-4-fibonacci-o-n" title="Link to this heading">#</a></h3>
-<p>Can you write an algorithm for the Fibonacci series with a time complexity of <span class="math notranslate nohighlight">\(O(n)\)</span> instead of <span class="math notranslate nohighlight">\(O(2^n)\)</span>? For example, Fibonacci sequence up to the 10th term (index 0 to 10) is <span class="math notranslate nohighlight">\([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\)</span>,</p>
+<p>Can you write an algorithm for the Fibonacci series with a time complexity of $O(n)$ instead of $O(2^n)$? For example, Fibonacci sequence up to the 10th term (index 0 to 10) is $[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]$,</p>
 <p>Hint: <a class="reference external" href="https://chanos.tistory.com/entry/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%EC%88%98%EC%97%B4%EC%9D%98-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EC%99%84%EB%B2%BD%ED%9E%88-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0">Helpful resource</a></p>
 <section id="id2">
 <h4><span class="section-number">4.2.4.1. </span>Solution<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
