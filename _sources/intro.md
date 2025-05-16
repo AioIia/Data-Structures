@@ -6,7 +6,7 @@
 
 ## Contents Overview
 
-A structured path through core programming concepts — from fundamentals to deeper abstractions.
+A structured path through core programming concepts
 
 | Module            | Description                                                                 |
 |-------------------|-----------------------------------------------------------------------------|
@@ -19,8 +19,6 @@ A structured path through core programming concepts — from fundamentals to dee
 | **7. Queues**     | Implement FIFO structures used in scheduling and real-time systems.         |
 
 ---
-
-### Module Flow
 
 ```{mermaid}
 flowchart LR

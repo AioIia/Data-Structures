@@ -711,8 +711,8 @@ None
 <span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Tomodachi Game&quot;</span><span class="p">,</span> <span class="s2">&quot;Mikoto Yamaguchi&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Yuuichi and his friends are thrown into a mysterious game that tests the strength of their bonds through deception, betrayal, and money.&quot;</span><span class="p">)</span>
 <span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Summer Time Rendering&quot;</span><span class="p">,</span> <span class="s2">&quot;Yasuki Tanaka&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Shinpei returns to his island hometown for a friend’s funeral, only to discover dark forces at play and a time loop that could change everything.&quot;</span><span class="p">)</span>
 <span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Go-Toubun no Hanayome&quot;</span><span class="p">,</span> <span class="s2">&quot;Negi Haruba&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Fuutarou, a top student, becomes the private tutor of five wealthy quintuplets who all hate studying — and might just fall in love with him.&quot;</span><span class="p">)</span>
-
-
+<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Ao Ashi&quot;</span><span class="p">,</span> <span class="s2">&quot;Yugo Kobayashi&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Ashito Aoi, a young football player, dreams of becoming a professional player and joins a prestigious youth team.&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="s2">&quot;Yofukashi no Uta&quot;</span><span class="p">,</span> <span class="s2">&quot;Kotoyama&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Kou, a sleepless teenager, wanders the city at night and meets Nazuna, a mysterious vampire girl — leading him into a nocturnal world of freedom, desire, and the allure of the night.&quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">library</span><span class="o">.</span><span class="n">search_books</span><span class="p">(</span><span class="s2">&quot;Makeine&quot;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">library</span><span class="o">.</span><span class="n">search_books</span><span class="p">(</span><span class="s2">&quot;Re:Zero&quot;</span><span class="p">))</span>
@@ -752,7 +752,7 @@ None
 <span class="s2">        &lt;style&gt;</span>
 <span class="s2">            .book-wrapper </span><span class="se">{{</span>
 <span class="s2">                display: inline-block;</span>
-<span class="s2">                margin: 15px;</span>
+<span class="s2">                margin: 10px;</span>
 <span class="s2">                vertical-align: top;</span>
 <span class="s2">            </span><span class="se">}}</span>
 <span class="s2">            </span>
@@ -870,7 +870,7 @@ None
 <span class="s2">                                &lt;h3 style=&quot;margin-top: 0; font-family: &#39;Playfair Display&#39;, serif; color: #2c3e50;&quot;&gt;</span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/h3&gt;</span>
 <span class="s2">                                &lt;p style=&quot;color: #444;&quot;&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;/p&gt;</span>
 <span class="s2">                                &lt;p style=&quot;color: #555; font-size: 0.95em; line-height: 1.4em;&quot;&gt;</span>
-<span class="s2">                                    </span><span class="si">{</span><span class="n">book</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;No description available for this book.&#39;</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">                                    </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="si">}</span>
 <span class="s2">                                &lt;/p&gt;</span>
 <span class="s2">                                &lt;p style=&quot;color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: &#39;Roboto&#39;, sans-serif; font-size: 13px;&quot;&gt;</span>
 <span class="s2">                                    ~ </span><span class="si">{</span><span class="n">book</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="si">}</span>
@@ -902,7 +902,7 @@ None
         <style>
             .book-wrapper {
                 display: inline-block;
-                margin: 15px;
+                margin: 10px;
                 vertical-align: top;
             }
 
@@ -1217,6 +1217,110 @@ None
                                 </p>
                                 <p style="color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: 'Roboto', sans-serif; font-size: 13px;">
                                     ~ Negi Haruba
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="book-5" class="book-wrapper" onclick="toggleFlip('book-5')">
+                <div class="book-3d-container">
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="
+                                background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                                url('../_static/images/Ao Ashi.jpg') no-repeat center center;
+                                background-size: cover;
+                                border-left: 6px solid #2ecc71;
+                                padding: 15px 20px;
+                                ">
+
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50;">Ao Ashi</h3>
+                                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Yugo Kobayashi</p>
+                                <p style="margin: 4px 0; color : #585858;">
+                                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
+                                </p>
+                                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
+                                    <div style="
+                                        background-color: #2ecc71;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                        width: 100.0%;
+                                        transition: width 0.3s;
+                                    "></div>
+                                </div>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
+                                    <strong>10 Copies</strong>
+                                </p>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%);">     
+                                    <strong>Click to see more</strong>
+                                </p>
+
+                            </div>
+                            <div class="book-back" style="
+                                background-color: #fdfdfd;
+                                border-left: 6px solid #2ecc71;
+                                ">
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; color: #2c3e50;">Ao Ashi</h3>
+                                <p style="color: #444;"><strong>Description:</strong></p>
+                                <p style="color: #555; font-size: 0.95em; line-height: 1.4em;">
+                                    Ashito Aoi, a young football player, dreams of becoming a professional player and joins a prestigious youth team.
+                                </p>
+                                <p style="color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: 'Roboto', sans-serif; font-size: 13px;">
+                                    ~ Yugo Kobayashi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="book-6" class="book-wrapper" onclick="toggleFlip('book-6')">
+                <div class="book-3d-container">
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="
+                                background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                                url('../_static/images/Yofukashi no Uta.jpg') no-repeat center center;
+                                background-size: cover;
+                                border-left: 6px solid #2ecc71;
+                                padding: 15px 20px;
+                                ">
+
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50;">Yofukashi no Uta</h3>
+                                <p style="margin: 4px 0; color : #585858;"><strong>Author:</strong> Kotoyama</p>
+                                <p style="margin: 4px 0; color : #585858;">
+                                    <strong>Status:</strong> <span style="color: #2ecc71; font-weight: bold;">Available</span>
+                                </p>
+                                <div style="background-color: #e0e0e0; border-radius: 5px; height: 14px; width: 100%; margin-top: 10px;">
+                                    <div style="
+                                        background-color: #2ecc71;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                        width: 70.0%;
+                                        transition: width 0.3s;
+                                    "></div>
+                                </div>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; margin-top: 6px;">
+                                    <strong>7 Copies</strong>
+                                </p>
+                                <p style="text-align: right; font-size: 0.9em; color: #555; position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%);">     
+                                    <strong>Click to see more</strong>
+                                </p>
+
+                            </div>
+                            <div class="book-back" style="
+                                background-color: #fdfdfd;
+                                border-left: 6px solid #2ecc71;
+                                ">
+                                <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; color: #2c3e50;">Yofukashi no Uta</h3>
+                                <p style="color: #444;"><strong>Description:</strong></p>
+                                <p style="color: #555; font-size: 0.95em; line-height: 1.4em;">
+                                    Kou, a sleepless teenager, wanders the city at night and meets Nazuna, a mysterious vampire girl — leading him into a nocturnal world of freedom, desire, and the allure of the night.
+                                </p>
+                                <p style="color: #888; text-align: right; position: absolute; bottom: 10px; right: 10px; font-family: 'Roboto', sans-serif; font-size: 13px;">
+                                    ~ Kotoyama
                                 </p>
                             </div>
                         </div>
